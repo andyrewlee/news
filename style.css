@@ -1,0 +1,13 @@
+h1 {
+  color: red;
+}
+
+.article img {
+  width: 400px;
+}
+
+.article .content {
+  display: inline-block;
+  width: 500px;
+  vertical-align: top;
+}
