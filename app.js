@@ -10,15 +10,24 @@ fetch('https://newsapi.org/v2/top-headlines?country=us&apiKey=61dbc3b8b96c46868c
   for (let i = 0; i < articles.length; i += 1) {
     const currentArticle = articles[i];
     console.log('currentArticle', currentArticle);
+
+    const {
+      urlToImage,
+      title,
+      author,
+      publishedAt,
+      description,
+    } = currentArticle;
+
     const currentArticleHtml = `
       <div class="article">
-        <img src="${currentArticle.urlToImage}" />
+        <img src="${urlToImage}" />
         <div class="content">
-          <h2>${currentArticle.title}</h2>
+          <h2>${title}</h2>
           <ul>
-            <li>Author: ${currentArticle.author}</li>
-            <li>${currentArticle.publishedAt}</li>
-            <li>${currentArticle.description}</li>
+            <li>Author: ${author}</li>
+            <li>${publishedAt}</li>
+            <li>${description}</li>
           </ul>
         </div>
       </div>
